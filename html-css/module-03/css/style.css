@@ -18,8 +18,8 @@ body {
 }
 
 nav {
-  margin-top: 72px;
-  margin-bottom: 96px;
+  padding-top: 72px;
+  padding-bottom: 96px;
 }
 main {
   font-size: 0;
@@ -39,11 +39,15 @@ main {
   list-style: none;
 }
 
+.site-navigation li:not(:last-child) {
+  margin-right: 108px;
+}
+
 .site-navigation a {
   text-decoration-line: none;
   text-transform: uppercase;
-  padding: 14px 56px;
-  color: #393b38;
+  padding: 14px 0;
+  color: #626262;
 }
 
 a:hover, a:focus {
@@ -104,8 +108,8 @@ button {
   width: 164px;
   height: 60px;
   background-color: transparent;
-  color: #393b38;
+  color: #626262;
   cursor: pointer;
-  border: 1px solid #393b38;
+  border: 1px solid #626262;
   padding: 0;
 }
