@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:300,900&display=swap');
+html {
+    box-sizing: border-box
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+header, section {
+    width: 1110px;
+    margin: 0 auto;
+}
+
+header {
+    padding-top: 36px;
+    padding-bottom: 106px;
+}
+
+.logo a {
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    line-height: 32px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #555252;
+    font-weight: 300;
+}
+
+.logo::first-letter {
+    font-weight: 900;
+    color: #1abc9c;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.logo {
+    float: left;
+}
+
+.menu-navigation {
+    float: right;
+}
+
+.menu-navigation li {
+    float: left;
+}
+
+.menu-navigation li:not(:last-child) {
+    margin-right: 34px;
+}
+
+.menu-item a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #0f0101;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 32px;
+}
+
+.menu-item a:hover, 
+.menu-item a:focus {
+    color: #1abc9c;
+    border: none;
+}
+
+nav::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+h2 {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 900;
+    text-align: center;
+    color: #515151;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    background-color: #1abc9c;
+    width: 164px;
+    height: 7px;
+    margin: 32px auto 92px;
+}
+
+.news h2::after {
+    content: "";
+    display: block;
+    background-color: #1abc9c;
+    width: 164px;
+    height: 7px;
+    margin: 32px auto 82px;
+}
+
+.features-list-item {
+    float: left;
+    width: 255px;
+    height: 322px;
+}
+
+a > img {
+    background-image: url(../img/background-for-features.png);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.features-list-item div {
+    background-color: #323232;
+}
+
+
+.item-name h3 {
+    width: 201px;
+}
+
+
+a > h3 {
+    font-size: 18px;
+    line-height: 32px;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 900;
+}
+
+a {
+    display: block;
+}
+
+
+article {
+    width: 350px;
+    float: left;
+}
+
+article img {
+    margin-bottom: 14px;
+}
+
+article:not(:nth-child(3n)){
+    margin-right: 30px;
+}
+
+article h4 {
+    color: #555252;
+    font-size: 18px;
+    line-height: 26px;
+    font-family: "OpenSans", sans-serif;
+    font-weight: 600;
+}
+
+article p {
+    font-family: "OpenSans", sans-serif;
+    line-height: 26px;
+    font-size: 14px;
+    color: #555252;
+    margin-bottom: 14px;
+}
+
+article .button {
+    border-radius: 3px;
+    border: none;
+    background-color:#4ec6ab;
+    width: 159px;
+    height: 51px;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 51px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+article a {
+    font-weight: 300;
+    color: #ffffff;
+    font-family: "OpenSans", sans-serif;
+}
+
+h4::after {
+    content: "";
+    display: block;
+    background-color: #1abc9c;
+    width: 136px;
+    height: 3px;
+    margin: 12px 0 26px;
+}
+
+
+
+.clearfix {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+.visually-hidden:not(focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden{
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
