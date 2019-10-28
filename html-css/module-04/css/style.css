@@ -11,6 +11,12 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+.clearfix::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
 header, section {
     width: 1110px;
     margin: 0 auto;
@@ -48,6 +54,7 @@ ul {
 
 .menu-navigation {
     float: right;
+    width: 486px;
 }
 
 .menu-navigation li {
@@ -71,12 +78,6 @@ ul {
 .menu-item a:focus {
     color: #1abc9c;
     border: none;
-}
-
-nav::after {
-    content: "";
-    clear: both;
-    display: block;
 }
 
 h2 {
@@ -110,7 +111,6 @@ h2::after {
 .features-list-item {
     float: left;
     width: 255px;
-    height: 322px;
 }
 
 a > img {
@@ -243,12 +243,6 @@ h4::after {
     padding-bottom: 82px;
 }
 
-.clearfix {
-    display: table;
-    content: "";
-    clear: both;
-}
-
 .visually-hidden:not(focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden{
@@ -257,9 +251,7 @@ input[type="radio"].visually-hidden{
     width: 1px;
     height: 1px;
     margin: -1px;
-
     white-space: nowrap;
-
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
