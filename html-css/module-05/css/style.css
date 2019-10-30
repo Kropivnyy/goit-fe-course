@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:300,900&display=swap");
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.clearfix::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.wrapper {
+  width: 1110px;
+  margin: 0 auto;
+}
+
+header {
+  padding-top: 32px;
+  padding-bottom: 28px;
+  width: 1600px;
+  margin: 0 auto;
+}
+
+.logo a {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  line-height: 32px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #555252;
+  font-weight: 300;
+}
+
+.logo::first-letter {
+  font-weight: 900;
+  color: #1abc9c;
+}
+
+ul {
+  list-style: none;
+}
+
+.logo {
+  float: left;
+}
+
+.menu-navigation {
+  float: right;
+  width: 486px;
+}
+
+.menu-navigation li {
+  float: left;
+}
+
+.menu-navigation li:not(:last-child) {
+  margin-right: 34px;
+}
+
+.menu-item a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #0f0101;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 32px;
+}
+
+.menu-item a:hover,
+.menu-item a:focus {
+  color: #1abc9c;
+}
+
+.slider {
+  width: 1600px;
+  height: 602px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slider .wrapper {
+  height: 602px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slider-ctrl {
+  width: 104px;
+  height: 104px;
+  background-color: #4ec6aca6;
+  border: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 0;
+}
+
+.slider-ctrl:hover,
+.slider-ctrl:focus {
+  background-color: #1abc9c;
+}
+
+.slider-ctrl-prev {
+  left: 0;
+}
+
+.slider-ctrl-next {
+  right: 0;
+}
+
+.slider-ctrl-next::after {
+  content: "\203A";
+  font-size: 100px;
+  line-height: 40px;
+  font-weight: 300;
+}
+
+.slider-ctrl-prev::after {
+  content: "\2039";
+  font-size: 100px;
+  line-height: 40px;
+  font-weight: 300;
+}
+
+.slides {
+  position: relative;
+}
+
+.slides::before {
+  content: "";
+  background-color: #00000285;
+  position: absolute;
+  width: 1600px;
+  height: 602px;
+}
+
+.slide-description {
+  text-transform: uppercase;
+  font-size: 60px;
+  line-height: 82px;
+  color: #ffffff;
+  font-weight: 900;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 770px;
+}
+
+.slide-description span {
+  font-size: 24px;
+  line-height: 54px;
+  font-weight: 300;
+  float: left;
+}
+
+.slider-span:not(:last-child)::after {
+  content: "\00A0/\00A0";
+}
+
+.new-collection {
+  background-color: #e9f0fd;
+  width: 1600px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+
+.new-collection-title {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 900;
+  text-align: center;
+  color: #515151;
+  padding-top: 100px;
+}
+
+.new-collection-title::after {
+  content: "";
+  display: block;
+  background-color: #1abc9c;
+  width: 164px;
+  height: 7px;
+  margin: 32px auto 82px;
+}
+
+.features-list {
+  position: relative;
+}
+
+.overlay {
+  width: 255px;
+  height: 282px;
+  border: 10px solid #ffffff;
+  background-color: #000000;
+  opacity: 0;
+  position: absolute;
+}
+
+.overlay-icons {
+  height: 107px;
+  width: 166px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icons-heart {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ffffff;
+  position: absolute;
+}
+
+.icons-sort {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ffffff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.icons-later {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ffffff;
+  position: absolute;
+  right: 0;
+}
+
+.icons-cart {
+  width: 166px;
+  height: 50px;
+  border: 1px solid #ffffff;
+  background-color: #323232;
+  opacity: 1;
+  position: absolute;
+  bottom: 0;
+}
+
+.features-list-item {
+  float: left;
+  width: 255px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.features-list-item:not(:nth-child(4n)) {
+  margin-right: 30px;
+}
+
+.features-list-item:not(:nth-last-child(-n + 4)) {
+  margin-bottom: 30px;
+}
+
+.features-list-item .parent {
+  background-color: #323232;
+  width: 255px;
+}
+
+.item-name {
+  float: left;
+  text-decoration: none;
+  width: 201px;
+}
+
+.parent .item-price {
+  float: right;
+  background-color: #ffffff70;
+  padding: 5px 0 3px;
+  width: 54px;
+  font-size: 18px;
+  line-height: 32px;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  font-weight: 900;
+  text-align: center;
+}
+
+.item-name > h3 {
+  font-size: 18px;
+  line-height: 32px;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 900;
+  padding: 5px 0px 3px 14px;
+  width: 100%;
+}
+
+.features-list-item:hover .parent,
+.features-list-item:focus .parent {
+  background-color: #1abc9c;
+}
+
+.features-list-item:hover .overlay,
+.features-list-item:focus .overlay {
+  opacity: 0.549;
+}
+
+.icons-heart:hover,
+.icons-heart:focus,
+.icons-sort:hover,
+.icons-sort:focus,
+.icons-later:hover,
+.icons-later:focus,
+.icons-cart:hover,
+.icons-cart:focus {
+  background-color: #1abc9c;
+  opacity: 1;
+}
+
+footer {
+    width: 1600px;
+    height: 88px;
+    background-color: #323232;
+    position: relative;
+    margin: 0 auto;
+}
+
+address {
+    color: #fefefe;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.copy::before {
+    content: "\00A9";
+}
+
+.vertical-bar::before {
+    content: "\2758";
+}
+
+.author {
+    display: inline;
+    color: #46bfa9;
+    text-decoration: none;
+}
+
+a {
+  display: block;
+}
+
+.visually-hidden:not(focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
