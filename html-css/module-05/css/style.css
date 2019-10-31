@@ -210,8 +210,7 @@ ul {
 .overlay {
   width: 255px;
   height: 282px;
-  border: 10px solid #ffffff;
-  background-color: #000000;
+  background-image: url(../img/overlay.png);
   opacity: 0;
   position: absolute;
 }
@@ -225,11 +224,18 @@ ul {
   transform: translate(-50%, -50%);
 }
 
+.overlay-icons button {
+  padding: 0;
+  cursor: pointer;
+}
+
 .icons-heart {
   width: 50px;
   height: 50px;
   border: 1px solid #ffffff;
   position: absolute;
+  background-image: url(../img/icons/icon-heart.png);
+  background-color: transparent;
 }
 
 .icons-sort {
@@ -239,6 +245,8 @@ ul {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  background-image: url(../img/icons/icon-sort.png);
+  background-color: transparent;
 }
 
 .icons-later {
@@ -247,6 +255,8 @@ ul {
   border: 1px solid #ffffff;
   position: absolute;
   right: 0;
+  background-image: url(../img/icons/icon-later.png);
+  background-color: transparent;
 }
 
 .icons-cart {
@@ -254,9 +264,17 @@ ul {
   height: 50px;
   border: 1px solid #ffffff;
   background-color: #323232;
-  opacity: 1;
+  background-image: url(../img/icons/icon-cart.png);
+  background-repeat: no-repeat;
   position: absolute;
   bottom: 0;
+}
+
+.add-to-cart {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding-left: 50px;
 }
 
 .features-list-item {
@@ -321,7 +339,7 @@ img {
 
 .features-list-item:hover .overlay,
 .features-list-item:focus .overlay {
-  opacity: 0.549;
+  opacity: 1;
 }
 
 .icons-heart:hover,
@@ -333,7 +351,7 @@ img {
 .icons-cart:hover,
 .icons-cart:focus {
   background-color: #1abc9c;
-  opacity: 1;
+  border: 1px solid #1abc9c;
 }
 
 footer {
