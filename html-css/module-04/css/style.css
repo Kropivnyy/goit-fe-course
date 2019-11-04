@@ -114,7 +114,7 @@ h2::after {
 }
 
 a > img {
-    background-image: url(../img/background-for-features.png);
+    background-color: #e9f0fd;
 }
 
 img {
