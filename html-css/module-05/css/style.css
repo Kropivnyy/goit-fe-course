@@ -202,16 +202,19 @@ ul {
   margin: 32px auto 82px;
 }
 
-.features-list {
+.features-fx {
   position: relative;
 }
 
 .overlay {
-  width: 255px;
-  height: 282px;
-  background-image: url(../img/overlay.png);
+  border: 10px solid #ffffff;
+  background-color: #0000008c;
   opacity: 0;
   position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .overlay-icons {
