@@ -8,9 +8,357 @@ html {
   box-sizing: inherit;
 }
 
-/* font-family: 'Roboto', sans-serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Kaushan Script', cursive; */
+body {
+  font-family: "Roboto", sans-serif;
+  color: #999999;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+header {
+  padding-bottom: 114px;
+}
+
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.site-logo {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 700;
+  color: #95e1d3;
+}
+
+.site-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  min-height: 50px;
+}
+
+.site-menu {
+  display: flex;
+  justify-content: space-between;
+  min-width: 490px;
+  list-style: none;
+}
+
+.menu-item {
+  position: relative;
+}
+
+.menu-item a {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  transition: color 200ms linear;
+  color: #95e1d3;
+}
+
+.menu-item a:hover {
+  color: #f38181;
+}
+
+.menu-item::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: transparent;
+  height: 3px;
+  width: 100%;
+  margin-top: 12px;
+  transition: background-color 200ms linear;
+}
+
+.menu-item:hover::after {
+  background-color: #f38181;
+}
+
+h2 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 24px;
+  color: #333333;
+  text-align: center;
+}
+
+.caps-title {
+  font-size: 30px;
+  color: #333333;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: block;
+  text-align: center;
+  margin-top: 22px;
+}
+
+.caps-title::after {
+  content: "";
+  display: block;
+  background-color: #f38181;
+  height: 3px;
+  width: 60px;
+  margin: 42px auto 0;
+}
+
+.services-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 66px;
+}
+
+.service-item {
+  flex-basis: 380px;
+  min-height: 72px;
+  display: flex;
+}
+
+.service-item div:only-of-type {
+  padding-left: 80px;
+  background-origin: padding-box;
+  background-repeat: no-repeat;
+}
+
+.service-item:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 100px;
+}
+
+.photography {
+  background-image: url(../img/services-icons/photography.png);
+}
+
+.web-design {
+  background-image: url(../img/services-icons/web-design.png);
+}
+
+.creativity {
+  background-image: url(../img/services-icons/creativity.png);
+}
+
+.seo {
+  background-image: url(../img/services-icons/seo.png);
+}
+
+.css-html {
+  background-image: url(../img/services-icons/css-html.png);
+}
+
+.digital {
+  background-image: url(../img/services-icons/digital.png);
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.services {
+  padding-bottom: 90px;
+}
+
+.team {
+  padding-bottom: 84px;
+}
+
+.team-description {
+  width: 980px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 42px 0 92px;
+}
+
+.team-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-name {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #333333;
+  text-align: center;
+  margin: 30px 0 16px;
+}
+
+.team-occupation {
+  font-weight: 300;
+  text-align: center;
+  font-style: italic;
+  color: #cccccc;
+}
+
+.team-background {
+  background-color: #95e1d3;
+}
+
+.team-fx {
+  position: relative;
+  transition: transform 200ms linear;
+}
+
+.overlay {
+  background-image: -moz-linear-gradient(
+    90deg,
+    rgba(252, 227, 138, 0.9) 0%,
+    rgba(243, 129, 129, 0.9) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    90deg,
+    rgba(252, 227, 138, 0.9) 0%,
+    rgba(243, 129, 129, 0.9) 100%
+  );
+  background-image: -ms-linear-gradient(
+    90deg,
+    rgba(252, 227, 138, 0.9) 0%,
+    rgba(243, 129, 129, 0.9) 100%
+  );
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transition: opacity 200ms linear;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-member:hover .overlay {
+  opacity: 1;
+}
+
+.team-member:hover .team-fx {
+  transform: translate(-10px, -10px);
+}
+
+.team-socials {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  font-size: 0;
+}
+
+.socials-item {
+  background-color: #fce38a;
+  height: 56px;
+  width: 56px;
+  transition: background-color 200ms linear;
+}
+
+.socials-item:hover {
+  background-color: #95e1d3;
+}
+
+.socials-item:not(:last-child) {
+  border-right: 1px solid rgba(243, 129, 129, 0.502);
+}
+
+.facebook {
+  background-image: url(../img/socials-icons/facebook.png);
+}
+
+.twitter {
+  background-image: url(../img/socials-icons/twitter.png);
+}
+
+.pinterest {
+  background-image: url(../img/socials-icons/pinterest.png);
+}
+
+.instagram {
+  width: 55px;
+  background-image: url(../img/socials-icons/instagram.png);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  display: block;
+  height: 100%;
+}
+
+footer {
+  border-top: 1px solid #e5e5e5;
+}
+
+.site-footer {
+  min-height: 62px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+address {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #333333;
+}
+
+.copy::before {
+  content: "\00A9";
+}
+
+.author {
+  display: inline;
+  color: #f38181;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.form-subscribe {
+  display: flex;
+}
+
+.input-area {
+  border: 1px solid #e7e7e7;
+  border-right: none;
+  height: 40px;
+  width: 230px;
+  padding: 0;
+  padding-left: 12px;
+  font-family: "Roboto", sans-serif;
+  color: #999999;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.input-area::placeholder {
+  font-style: italic;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  color: #cccccc;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.subscribe-button {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  height: 40px;
+  width: 150px;
+  background-color: #95e1d3;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
 
 .visually-hidden:not(focus):not(:active),
 input[type="checkbox"].visually-hidden,
