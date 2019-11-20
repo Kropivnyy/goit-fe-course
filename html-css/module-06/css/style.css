@@ -235,6 +235,10 @@ h3 {
   justify-content: center;
 }
 
+.team-member {
+  width: 380px;
+}
+
 .team-member:hover .overlay {
   opacity: 1;
 }
@@ -292,11 +296,8 @@ a {
   height: 100%;
 }
 
-footer {
-  border-top: 1px solid #e5e5e5;
-}
-
 .site-footer {
+  border-top: 1px solid #e5e5e5;
   min-height: 62px;
   display: flex;
   justify-content: space-between;
