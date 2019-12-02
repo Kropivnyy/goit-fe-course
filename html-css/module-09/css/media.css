@@ -1,0 +1,114 @@
+@media (max-width: 767px) {
+  .greeting {
+    background-image: url(../img/mobile-background.jpg);
+  }
+
+  .sub-title {
+    max-width: 230px;
+  }
+
+  .partner-item {
+    margin-bottom: 28px;
+  }
+
+  .partner-hobby {
+    max-width: 220px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 768px) {
+  .greeting {
+    min-height: 700px;
+  }
+
+  .navigation {
+    margin-bottom: 100px;
+    flex-direction: row-reverse;
+    align-items: center;
+    min-height: 110px;
+  }
+
+  .authorization {
+    padding: 0;
+  }
+
+  .main-title {
+    padding-bottom: 34px;
+    font-size: 50px;
+  }
+
+  .sub-title {
+    padding-bottom: 34px;
+    font-size: 24px;
+  }
+
+  .find-partner {
+    width: 224px;
+  }
+
+  .section-partners {
+    margin-bottom: 40px;
+  }
+
+  .title-partners {
+    padding-bottom: 30px;
+  }
+
+  .partner-list {
+    margin-bottom: 40px;
+  }
+
+  .other-partners {
+    flex-basis: 192px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 939px) {
+  .greeting {
+    background-image: url(../img/tablet-background.jpg);
+  }
+
+  .partner-item:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: 940px) {
+  [class*="-lg"] {
+    padding: 0;
+  }
+
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .greeting {
+    background-size: cover;
+    background-image: url(../img/desktop-background.jpg);
+  }
+
+  .authorization {
+    justify-content: flex-end;
+  }
+
+  .site-logo {
+    text-align: left;
+  }
+
+  .main-title {
+    font-size: 52px;
+  }
+
+  .section-partners {
+    margin-bottom: 72px;
+  }
+
+  .title-partners {
+    padding-bottom: 32px;
+  }
+
+  .partner-item:not(:last-child) {
+    padding-right: 20px;
+  }
+}
