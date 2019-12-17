@@ -1,0 +1,81 @@
+.team-member__name {
+    text-transform: uppercase;
+    font-family: $secondary-font-family;
+    font-size: $secondary-font-size;
+    color: $secondary-grey-color;
+    text-align: center;
+    margin: 30px 0 16px;
+  }
+  
+  .team-member__occupation {
+    font-weight: 300;
+    text-align: center;
+    font-style: italic;
+    color: #cccccc;
+  }
+  
+  .team-member__fx {
+    position: relative;
+    transition: all $primary-animation;
+    box-shadow: 0 0 0 $primary-blue-color;
+  }
+  
+  .team-member__overlay {
+    background-image: $primary-gradient;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: opacity $primary-animation;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .team-member {
+    flex-basis: 380px;
+
+    &:hover .team-member__overlay {
+    opacity: 1;
+     }
+  
+     &:hover .team-member__fx {
+    transform: translate(-10px, -10px);
+    box-shadow: 10px 10px 0 $primary-blue-color;
+     }
+    }
+  
+  .team-member__socials {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .team-member__socials-item {
+    background-color: $primary-accent-color;
+    height: 56px;
+    width: 56px;
+    transition: background-color $primary-animation;
+  
+     &:hover {
+    background-color: $secondary-accent-color;
+     }
+  
+    &:not(:last-child) {
+        border-right: 1px solid rgba(243, 129, 129, 0.502);
+    }
+  
+     &--svg {
+    display: block;
+    margin-top: 15px;
+    fill: $secondary-accent-color;
+    height: 26px;
+    width: 100%;
+    transition: fill $primary-animation;
+    }
+  
+     &:hover .team-member__socials-item--svg {
+    fill: $primary-white-color;
+        }
+    }
