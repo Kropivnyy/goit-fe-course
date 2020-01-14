@@ -1,0 +1,16 @@
+.address {
+    font-family: $secondary-font-family;
+    font-size: $secondary-font-size;
+    color: $secondary-grey-color;
+  }
+  
+  .address__icon-copy::before {
+    content: "\00A9";
+  }
+  
+  .address__link-author {
+    display: inline;
+    color: $secondary-accent-color;
+    font-size: $secondary-font-size;
+    font-family: $secondary-font-family;
+  }

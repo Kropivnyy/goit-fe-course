@@ -1,0 +1,34 @@
+.team {
+    padding-bottom: 84px;
+  }
+  
+  .team__title {
+    font-size: 30px;
+    color: $secondary-grey-color;
+
+    &--cursive {
+        font-size: 24px;
+        color: $secondary-grey-color;
+        margin-bottom: 22px;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            background-color: $secondary-accent-color;
+            height: 3px;
+            width: 60px;
+            margin: 42px auto 0;
+          }
+  }
+  
+  .team__description {
+    width: 980px;
+    text-align: center;
+    margin: 42px auto 92px;
+  }
+  
+  .team__list {
+    display: flex;
+    justify-content: space-between;
+  }
