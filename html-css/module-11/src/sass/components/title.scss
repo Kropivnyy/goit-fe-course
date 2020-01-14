@@ -1,0 +1,14 @@
+.title {
+    font-family: $secondary-font-family;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .title--cursive {
+    font-family: $cursive-font-family;
+    text-align: center;
+    display: block;
+    text-transform: none;
+    font-weight: 400;
+  }

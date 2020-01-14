@@ -1,0 +1,45 @@
+.greeting {
+    min-height: 1000px;
+    background: $primary-gradient,
+      no-repeat center/cover url(../images/welcome-background.jpg);
+
+      @media (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+    background: $primary-gradient,
+      no-repeat center/cover url(../images/welcome-background@2x.jpg);
+      }
+  }
+
+  .greeting__title {
+    font-size: 150px;
+    line-height: 140px;
+    color: $primary-white-color;
+    text-align: center;
+    width: 850px;
+    margin: 0 auto 120px;
+  }
+  
+  .greeting__title--cursive {
+    color: $primary-white-color;
+    font-size: 72px;
+  }
+  
+  .greeting__link {
+    text-transform: uppercase;
+    color: $primary-white-color;
+    font-family: $secondary-font-family;
+    font-size: $secondary-font-size;
+    line-height: 34px;
+    font-weight: 700;
+    margin: 0 auto;
+    width: 160px;
+    height: 40px;
+    border: 3px solid $primary-white-color;
+    text-align: center;
+    transition: all $primary-animation;
+  }
+  
+  .greeting__link:hover {
+    color: $primary-accent-color;
+    border-color: $primary-accent-color;
+  }
