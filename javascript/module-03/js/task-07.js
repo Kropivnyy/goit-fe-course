@@ -23,12 +23,12 @@ const account = {
    * Принимает сумму и тип транзакции.
    */
   createTransaction(amount, type) {
-    const transactionObject = {
-      Id: this.transactions.length + 1,
-      Type: type,
-      Amount: amount,
-    };
-    return transactionObject;
+    // Я видел функцию Репеты, но мне не нравится все это.
+    // Во-первых, мне для вызова функции getTransactionDetails
+    // надо написть заранее ИД, а генерируется все
+    // время разная строка. Ну и теоретически при большой
+    // истории транзакций есть шанс генерации одинаковых ИД)))
+    return { id: this.transactions.length + 1, type, amount };
   },
 
   /*
@@ -74,7 +74,7 @@ const account = {
    */
   getTransactionDetails(id) {
     for (const transaction of this.transactions) {
-      if (transaction.Id === id) {
+      if (transaction.id === id) {
         return transaction;
       }
     }
@@ -88,8 +88,8 @@ const account = {
   getTransactionTotal(type) {
     let transactionTotal = 0;
     for (const transaction of this.transactions) {
-      if (transaction.Type === type) {
-        transactionTotal += transaction.Amount;
+      if (transaction.type === type) {
+        transactionTotal += transaction.amount;
       }
     }
     if (type === 'deposit') {
