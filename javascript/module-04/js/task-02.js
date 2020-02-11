@@ -3,18 +3,19 @@ const inventory = {
   add(itemName) {
     console.log(`Adding ${itemName} to inventory`);
 
-    inventory.items.push(itemName);
+    this.items.push(itemName);
   },
   remove(itemName) {
     console.log(`Removing ${itemName} from inventory`);
 
-    inventory.items = inventory.items.filter(item => item !== itemName);
+    this.items = this.items.filter(item => item !== itemName);
   },
 };
 
 const invokeInventoryAction = function(itemName, action) {
   console.log(`Invoking action on ${itemName}`);
-  action(itemName);
+  const boundAction = action.bind(inventory, itemName);
+  boundAction();
 };
 
 invokeInventoryAction('Medkit', inventory.add);
