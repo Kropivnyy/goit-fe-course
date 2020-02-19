@@ -9,7 +9,7 @@ class Storage {
     this.items.push(item);
   }
   removeItem(item) {
-    this.items.splice(this.items.indexOf(item), 1);
+    this.items = this.items.filter(itemName => itemName !== item);
   }
 }
 
