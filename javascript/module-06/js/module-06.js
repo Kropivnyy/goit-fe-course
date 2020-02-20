@@ -13,8 +13,8 @@ console.log(getUsersWithEyeColor(users, 'blue')); // [объект Moore Hensley
 
 console.log(`Task 03`);
 const getUsersWithGender = (users, gender) => {
-  const filterArray = (a, b) => users.filter(user => user.gender === gender);
-  return filterArray(users, gender).map(user => user.name);
+  const filterArray = () => users.filter(user => user.gender === gender);
+  return filterArray().map(user => user.name);
 };
 
 console.log(getUsersWithGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
