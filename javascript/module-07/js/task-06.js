@@ -1,4 +1,4 @@
-const validationValue = document.querySelector('input[id="validation-input"]');
+const validationValue = document.querySelector('[id="validation-input"]');
 const dataLength = validationValue.getAttribute('data-length');
 const validation = () => {
   const inputText = validationValue.value.trim();
@@ -6,8 +6,7 @@ const validation = () => {
     validationValue.classList.add('invalid');
     validationValue.classList.remove('valid');
     return;
-  }
-  if (inputText.length >= dataLength) {
+  } else {
     validationValue.classList.add('valid');
     validationValue.classList.remove('invalid');
     return;
