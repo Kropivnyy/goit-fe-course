@@ -1,0 +1,104 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 2vw;
+  color: #ff7400;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.container {
+  width: 90%;
+}
+.timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.value {
+  font-family: 'Oxygen', sans-serif;
+  font-size: 12vw;
+  text-shadow: 0 0 15px #555;
+  opacity: 0.8;
+}
+.field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-preferred-size: 25%;
+  flex-basis: 25%;
+}
+.label,
+.text {
+  letter-spacing: 3px;
+  opacity: 0.7;
+  text-shadow: 0 0 4px #666;
+}
+.text {
+  font-size: calc(2vw * 2);
+  padding-left: 5vw;
+}
+.background-video {
+  visibility: visible;
+  margin: auto;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100vw;
+}
+@media screen and (max-aspect-ratio: 16/9) {
+  .background-video {
+    width: auto;
+    height: 100vh;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .background-video {
+    visibility: hidden;
+  }
+  body {
+    background: no-repeat center/cover url(../img/background.jpeg);
+  }
+}
