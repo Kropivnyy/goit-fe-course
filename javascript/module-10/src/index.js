@@ -16,15 +16,16 @@ if (localStorage.getItem('theme') === theme.DARK) {
 const changeBodyCLass = () => {
   refs.body.classList.add(localStorage.getItem('theme'));
 };
+const changeLocalStorage = (set, del) => {
+  localStorage.setItem('theme', set);
+  changeBodyCLass();
+  refs.body.classList.remove(del);
+};
 const themeSwitcher = () => {
   if (refs.input.checked) {
-    localStorage.setItem('theme', theme.DARK);
-    changeBodyCLass();
-    refs.body.classList.remove(theme.LIGHT);
+    changeLocalStorage(theme.DARK, theme.LIGHT);
   } else {
-    localStorage.setItem('theme', theme.LIGHT);
-    changeBodyCLass();
-    refs.body.classList.remove(theme.DARK);
+    changeLocalStorage(theme.LIGHT, theme.DARK);
   }
 };
 
