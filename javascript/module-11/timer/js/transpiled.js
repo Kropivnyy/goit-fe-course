@@ -64,6 +64,6 @@ var CountdownTimer = function CountdownTimer(_ref) {
 
 var timer = new CountdownTimer({
   selector: '#timer-1',
-  targetDate: new Date(2020, 3, 24, 23, 59, 59)
+  targetDate: new Date(2020, 4, 11, 23, 59, 59)
 });
 createClock(timer.selector, timer.targetDate);
