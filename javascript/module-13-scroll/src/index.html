@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Module 13</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <form class="search-form" id="search-form">
+      <div class="search-form__position">
+        <input type="text" id="query" autocomplete="off" required />
+        <span class="bar"></span>
+        <label class="label" for="query">Search images</label>
+      </div>
+      <button type="submit" class="find-button btn btn-primary">Find</button>
+    </form>
+    <div class="grid">
+      <div class="grid__col-sizer"></div>
+      <div class="grid__gutter-sizer"></div>
+    </div>
+
+    <div class="page-load-status">
+      <div class="loader-ellips infinite-scroll-request">
+        <span class="loader-ellips__dot"></span>
+        <span class="loader-ellips__dot"></span>
+        <span class="loader-ellips__dot"></span>
+        <span class="loader-ellips__dot"></span>
+      </div>
+      <p class="infinite-scroll-last">End of content</p>
+      <p class="infinite-scroll-error">No more pages to load</p>
+    </div>
+
+    <!-- .photo-item template HTML -->
+    <script type="text/html" id="photo-item-template">
+      <div class="photo-item">
+        <a class="photo__link" href="{{urls.regular}}">
+          <img class="photo-item__image" src="{{urls.small}}" alt="{{description}}" width="400" data-source="{{urls.regular}}" />
+
+          <div class="photo-item__stats">
+            <p class="stats-item">
+              <i class="material-icons">thumb_up</i>
+              {{likes}}
+            </p>
+          </div>
+        </a>
+      </div>
+    </script>
+  </body>
+</html>
