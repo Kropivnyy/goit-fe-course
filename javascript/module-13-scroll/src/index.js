@@ -31,13 +31,13 @@ refs.grid.addEventListener('click', event => {
 });
 document.addEventListener('keyup', event => {
   event.preventDefault();
-  lightbox.closeModal(event);
-});
-document.addEventListener('keyup', event => {
-  event.preventDefault();
-  lightbox.showNextImage(event);
-});
-document.addEventListener('keyup', event => {
-  event.preventDefault();
-  lightbox.showPrevImage(event);
+  if (event.key === 'Escape') {
+    lightbox.closeModal();
+  }
+  if (event.key === 'ArrowLeft') {
+    lightbox.showPrevImage();
+  }
+  if (event.key === 'ArrowRight') {
+    lightbox.showNextImage();
+  }
 });

@@ -13,10 +13,8 @@ export default {
     this.lightboxRef.src = event.target.dataset.source;
   },
 
-  closeModal(event) {
-    if (event.key === 'Escape') {
-      this.instance.close();
-    }
+  closeModal() {
+    this.instance.close();
   },
   findImageIndex() {
     return apiService.foundImages.findIndex(
@@ -29,24 +27,20 @@ export default {
     });
     this.lightboxRef.src = elem.urls.regular;
   },
-  showNextImage(event) {
-    if (event.key === 'ArrowRight') {
-      let currentImageIndex = this.findImageIndex();
-      let nextImageIndex = currentImageIndex + 1;
-      nextImageIndex >= apiService.foundImages.length
-        ? (currentImageIndex = 0)
-        : (currentImageIndex += 1);
-      this.changeImage(currentImageIndex);
-    }
+  showNextImage() {
+    let currentImageIndex = this.findImageIndex();
+    let nextImageIndex = currentImageIndex + 1;
+    nextImageIndex >= apiService.foundImages.length
+      ? (currentImageIndex = 0)
+      : (currentImageIndex += 1);
+    this.changeImage(currentImageIndex);
   },
-  showPrevImage(event) {
-    if (event.key === 'ArrowLeft') {
-      let currentImageIndex = this.findImageIndex();
-      let prevImageIndex = currentImageIndex - 1;
-      prevImageIndex < 0
-        ? (currentImageIndex = apiService.foundImages.length - 1)
-        : (currentImageIndex -= 1);
-      this.changeImage(currentImageIndex);
-    }
+  showPrevImage() {
+    let currentImageIndex = this.findImageIndex();
+    let prevImageIndex = currentImageIndex - 1;
+    prevImageIndex < 0
+      ? (currentImageIndex = apiService.foundImages.length - 1)
+      : (currentImageIndex -= 1);
+    this.changeImage(currentImageIndex);
   },
 };
